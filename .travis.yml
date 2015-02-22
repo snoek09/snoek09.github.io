@@ -20,4 +20,4 @@ after_success:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
 env:
   global:
-    secure: "qZvPiv5ZnK8uVesv05bo+BaUr0DhH+Sb0mBtWr/tS+ohp4fg7BQx4abXFe9out0GFxBaAxy4J2obd4TNLkSM6me8mwMxmrVRAGZXvHRh04fIO0LpVhoeRgAAcRGHCbqAvk40mNCEgUMU7X/nKLDHrLcgZlyRdTTmWWcrgSpfitY="
+    secure: m2tbZQYhWBfZKoJ8qO3cETr67ZOpVqGcFbNaYcyv53gxBUS26KVIQaFWyGegdv0tnl4tOyNOaXtOcLP2izc1rauHU8hv+9mUwDHA3wyRk4ao0KLB362OFEvkyAabBWi8vnEM1o66ZS+o/dUNyNRXl+xLeKgJXiaH64yEYpI8l7Q=
