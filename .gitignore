@@ -4,6 +4,6 @@
 /app/config/sculpin_site_*.yml
 /app/logs/*
 /output_*/
-/source/components/
+/components/
 /vendor/
 /.idea/
