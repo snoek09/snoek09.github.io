@@ -6,3 +6,4 @@ set -x
 # build site
 ./vendor/bin/sculpin generate --env prod
 touch output_prod/.nojekyll
+touch output_prod/.travis.yml
