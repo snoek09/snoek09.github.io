@@ -3,11 +3,6 @@
 Sculpin Blog Skeleton
 =====================
 
-A skeleton for a Sculpin based blog.
-
-Powered by [Sculpin](http://sculpin.io). =)
-
-
 Features
 --------
 
@@ -26,24 +21,6 @@ A very basic Sculpin based blog supporting the following features:
  * A blog tags page at `/blog/tags`.
  * A blog tag index at `/blog/tags/$tag`. Similar to the blog archive
    except broken down by each tag.
-
-
-Build
------
-
-### If You Already Have Sculpin
-
-    sculpin install
-    sculpin generate --watch --server
-
-Your newly generated clone of sculpin-blog-skeleton is now
-accessible at `http://localhost:8000/`.
-
-### If You Need Sculpin
-
-    curl -O https://download.sculpin.io/sculpin.phar
-    php sculpin.phar install
-    php sculpin.phar generate --watch --server
 
 
 Previewing Development Builds
