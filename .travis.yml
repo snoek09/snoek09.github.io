@@ -18,5 +18,6 @@ script:
 - sh build.sh
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
-dd:
-  secure: qZvPiv5ZnK8uVesv05bo+BaUr0DhH+Sb0mBtWr/tS+ohp4fg7BQx4abXFe9out0GFxBaAxy4J2obd4TNLkSM6me8mwMxmrVRAGZXvHRh04fIO0LpVhoeRgAAcRGHCbqAvk40mNCEgUMU7X/nKLDHrLcgZlyRdTTmWWcrgSpfitY=
+env:
+  global:
+    secure: "qZvPiv5ZnK8uVesv05bo+BaUr0DhH+Sb0mBtWr/tS+ohp4fg7BQx4abXFe9out0GFxBaAxy4J2obd4TNLkSM6me8mwMxmrVRAGZXvHRh04fIO0LpVhoeRgAAcRGHCbqAvk40mNCEgUMU7X/nKLDHrLcgZlyRdTTmWWcrgSpfitY="
