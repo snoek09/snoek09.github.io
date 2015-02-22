@@ -6,4 +6,4 @@ set -x
 # build site
 ./vendor/bin/sculpin generate --env prod
 touch output_prod/.nojekyll
-echo -e "language: php\nphp:\n-hhvm" > output_prod/.travis.yml
+echo "language: php\nphp:\n-hhvm" > output_prod/.travis.yml
