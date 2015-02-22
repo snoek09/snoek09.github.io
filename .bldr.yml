@@ -1,0 +1,43 @@
+bldr:
+    name: snoek09/site
+    profiles:
+        publish:
+            description: Building and publishing the website
+            tasks:
+                - sculpin_generate
+                - publish
+        watch:
+            description: Executes the watch commands
+            tasks:
+                - sculpin_watch
+    tasks:
+        sculpin_generate:
+            description: Creates the static website using Sculpin
+            calls:
+                -
+                    type: exec
+                    executable: vendor/bin/sculpin
+                    arguments:
+                        - 'generate'
+                        - '--env'
+                        - 'prod'
+
+        sculpin_watch:
+            description: Creates the static website using Sculpin and watches for changes
+            calls:
+                -
+                    type: background
+                    executable: vendor/bin/sculpin
+                    arguments:
+                        - 'generate'
+                        - '--watch'
+                        - '--server'
+
+        publish:
+            description: Publishes the output_prod directory to the master branch
+            calls:
+                -
+                    type: exec
+                    executable: sh
+                    arguments: ['publish.sh']
+
