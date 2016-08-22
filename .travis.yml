@@ -8,7 +8,6 @@ branches:
   - source
 
 before_install:
-  - phpenv config-rm xdebug.ini || true
   - composer selfupdate
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
