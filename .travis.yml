@@ -1,22 +1,30 @@
 language: php
-php:
-- hhvm
-sudo: false
+php: 7
+
+sudo: true
+
 cache:
   directories:
   - $HOME/.composer/cache
+
 branches:
   only:
   - source
+
 before_install:
-- echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
-before_script:
-- composer selfupdate
-- composer install --prefer-dist
+  - phpenv config-rm xdebug.ini || true
+  - composer selfupdate
+  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
+
+install:
+  - composer install --prefer-dist
+
 script:
-- sh build.sh
+  - sh build.sh
+
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
+
 env:
   global:
     secure: "V2TfBoUSGExOoaJ1Jaqi4XLuhHmvbYvC/WJUyGf4lHKtU69CK1kHiKVnHVu9hoaBW9yfFAYq30jbBr4SVeNxMSZ44dy2K1Nhps9KR0J4QQnL2th0jEXylGcrzHltsMo+W/IEg39E39ObogRAbL1wbcL6xSSJl56Mq90UKQTL6zA="
