@@ -1,28 +1,63 @@
-h4 small
-{
-    display: block;
-    font-size: 60%;
-    color: #888;
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
 }
 
-.mainContent, footer.container {
-    max-width: 900px;
+nav .menu {
+    float: left;
+    margin-left: 20px;
 }
 
-footer.container {
-    margin-top: 30px;
+nav .menu a {
+    margin-left: 20px;
+}
+
+main {
+    margin-top: 80px;
+}
+
+article {
+    margin-top: 50px;
+    border-bottom: 1px dashed #ccc;
+    color: #1D1D1D;
+}
+
+footer {
+    margin: 20px 0;
+    text-align: center;
+    color: #525252;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.nav-container {
+    overflow: auto;
     padding: 30px 0;
-    border-top: 1px dashed #aaa;
 }
 
-@media (max-width: 767px) {
-    .sidebar {
-        padding-top: 30px;
-    }
+article h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-@media (min-width: 980px) {
-    body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        padding-bottom: 40px;
+
+.date {
+    color: #565656;
+    font-size: 15px;
+}
+
+pre {
+    background: none;
+}
+
+@media screen and (max-width: 780px){
+    #wrapper {
+        width: 100%;
+        padding: 10px;
     }
 }
