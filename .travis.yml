@@ -1,11 +1,7 @@
 language: php
 php: 7
 
-sudo: true
-
-cache:
-  directories:
-  - $HOME/.composer/cache
+sudo: false
 
 branches:
   only:
@@ -16,14 +12,11 @@ before_install:
   - composer selfupdate
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
-install:
-  - composer install --prefer-dist
+install: composer install --prefer-dist
 
-script:
-  - sh build.sh
+script: sh build.sh
 
-after_success:
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
+after_success: if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
 
 env:
   global:
