@@ -3,7 +3,7 @@ layout: default
 title: About
 
 ---
-# About Snook Blogg
+# About Snook Bloggy Blog
 
 Digital playground for sculpin blog.
 
