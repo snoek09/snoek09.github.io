@@ -5,8 +5,6 @@ title: About
 ---
 # About Snook Bloggy Blog
 
-Digital playground for sculpin blog.
-
 Made possible by:
 
 - [Sculpin](https://sculpin.io/)
