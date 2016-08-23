@@ -5,5 +5,5 @@ title: Snook Bloggy Blog
 subtitle: Blog it like it's hot
 
 # Insert your disqus shortname
-#disqus:
-#    shortname:
+disqus:
+    shortname: snoek09
