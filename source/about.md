@@ -3,6 +3,11 @@ layout: default
 title: About
 
 ---
-# About the Author or Blog
+# About Snook Blogg
 
-Here is a little information about the author or the blog.
+Digital playground for sculpin blog.
+
+Made possible by:
+
+- [Sculpin](https://sculpin.io/)
+- [Wouter J](http://wouterj.nl/2015/02/using-travis-to-build-your-sculpin-blog/)
