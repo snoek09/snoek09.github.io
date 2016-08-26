@@ -6,7 +6,7 @@ h4 small
 }
 
 .mainContent, footer.container {
-    max-width: 900px;
+    max-width: 40em;
 }
 
 footer.container {

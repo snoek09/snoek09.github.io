@@ -3,7 +3,7 @@ layout: default
 title: About
 
 ---
-# About Snook Bloggy Blog
+# About
 
 Made possible by:
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ site.title }} &mdash; {% block title %}{{ page.title }}{% endblock %}</title>
+        <title>{% block title %}{{ page.title }}{% endblock %} &dash; {{ site.title }}</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@
     </head>
     <body>
         <header>
-            <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container-fluid">
                         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -60,10 +60,8 @@
                         <a class="brand" href="{{ site.url }}/">{{ site.title }}</a>
                         <div class="nav-collapse collapse">
                             <ul class="nav">
-                                <li><a href="{{ site.url }}/blog">Posts Archive</a></li>
-                                <li><a href="{{ site.url }}/blog/categories">Categories</a></li>
-                                <li><a href="{{ site.url }}/blog/tags">Tags</a></li>
-                                <li><a href="{{ site.url }}/about">About</a></li>
+                                <li><a href="{{ site.url }}/about">about</a></li>
+                                <li><a href="{{ site.url }}/blog">archives</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div>
