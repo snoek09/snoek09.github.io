@@ -1,0 +1,7 @@
+imports:
+    - sculpin_site.yml
+
+disqus:
+    shortname: snoek09
+
+google_analytics_tracking_id: UA-59541230-1
