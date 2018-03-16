@@ -5,8 +5,7 @@ branches:
   only:
   - source
 before_install:
-  - phpenv config-rm xdebug.ini || true
-  - composer selfupdate
+  - phpenv config-rm xdebug.ini
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 install: composer install --prefer-dist
 script: sh build.sh
