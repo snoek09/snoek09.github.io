@@ -1,23 +1,16 @@
 language: php
 php: 7
-
 sudo: false
-
 branches:
   only:
   - source
-
 before_install:
   - phpenv config-rm xdebug.ini || true
   - composer selfupdate
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
-
 install: composer install --prefer-dist
-
 script: sh build.sh
-
 after_success: if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
-
 env:
   global:
-    secure: WfXSxh84A+qtGWRVNIvWssaqIla8pOcNTjycPsIRLJgiiaVmJN3E7Acxe2/++lC9w5D9MKpoZpdyfXmsjvN2QpTbGb0yupZ7FKtZZpomYyFGQnkwiU3wsDQNikjsvYE2Gr25MKzZ0phhj0lmOGV1jXgXgQ0/GDz9B/6nzDBki8Q=
+    secure: Osxth0l1MxNmxS1Uxgia9Inh9CXexw9r3D4CPwIyswJkcQTFpNUdXPk5hOuAVym+YibEYtX3yLjrLs6u0wZP7B/XoWoTpr7RnXCL5x1zxAanWWha5E0I1ghm2izjFg00ADt1rGeoajKt12t+PqBemycx+3bu792vGd9aF6InwF4=
