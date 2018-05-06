@@ -1,3 +1,5 @@
+sculpin:
+    output_dir: %sculpin.project_dir%/output
 sculpin_content_types:
     posts:
         permalink: blog/:year/:month/:day/:filename/
