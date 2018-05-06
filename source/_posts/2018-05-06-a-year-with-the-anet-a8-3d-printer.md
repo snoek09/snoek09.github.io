@@ -4,8 +4,8 @@ tags: [anet, a8]
 categories: [3d-printing]
 ---
 
-Last year, after using 3D Hubs several times, I decided to take the jump; I'm getting myself a 3D printer.
-I decided to get an Anet A8 for 2 reasons:
+Last year, after using 3D Hubs several times, I decided to take the jump; getting myself a 3D printer.
+I decided to buy an Anet A8 for 2 reasons:
  
 - it's cheap
 - lots of upgrades available
