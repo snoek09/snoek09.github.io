@@ -15,5 +15,5 @@ services:
             context: ./
             dockerfile: docker/blog/Dockerfile
         volumes:
-            # Nginx should pick up local changes to files in ./output
-            - ./output:/usr/share/nginx/html
+            # Nginx should pick up local changes to files in ./output_dev
+            - ./output_dev:/usr/share/nginx/html
