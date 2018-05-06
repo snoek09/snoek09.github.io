@@ -60,3 +60,5 @@ Some other modifications I printed which I think are nice but not really needed;
 - cooling fan cover
 
 The list of all the upgrades I've printed: [https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades](https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades)
+
+![Anet A8 with 3D printed upgrades](/images/anet-a8-upgrades.jpg){.img-responsive}
