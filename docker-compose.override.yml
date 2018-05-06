@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+    build:
+        container_name: php-and-symfony-build
+        image: desnoek/php-and-symfony-build
+        build:
+            context: ./
+            dockerfile: docker/build/Dockerfile
+        volumes:
+            - ./:/opt
+
+    blog:
+        build:
+            context: ./
+            dockerfile: docker/blog/Dockerfile
+        volumes:
+            # Nginx should pick up local changes to files in ./output
+            - ./output:/usr/share/nginx/html

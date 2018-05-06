@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    blog:
+        container_name: php-and-symfony-blog
+        image: desnoek/php-and-symfony-blog
+        restart: always
+        ports:
+            - 80:80
