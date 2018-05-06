@@ -9,7 +9,7 @@ nothing:
 install:
     composer install
 
-# Process all source files
+# Generate dev output
 all:
-    vendor/bin/sculpin --project-dir=/opt --env=prod generate
+    vendor/bin/sculpin --project-dir=/opt --env=dev generate
 
