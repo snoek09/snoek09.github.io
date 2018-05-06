@@ -51,7 +51,7 @@ One of the last thing I installed was a [MOSFET](https://www.banggood.com/3D-Pri
 had different connectors which could melt if not properly connected. The hotbed is now powered through the MOSFET which removes some
 stress for the main board.
 
-Some other modifications I printed which I think are nice but not really needed; ipmusic.org/
+Some other modifications I printed which I think are nice but not really needed;
 
 - semi circular fan duct
 - filament guide
