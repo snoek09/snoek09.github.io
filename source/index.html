@@ -3,29 +3,31 @@ layout: default
 title: Home
 generator: pagination
 pagination:
-    max_per_page: 1
+    max_per_page: 3
 use:
     - posts
 ---
 {% for post in page.pagination.items %}
     <article>
         <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+            <h2>{{ post.title }}</h2>
         </header>
 	<div>
            <h4>{{ post.date|date("Y-m-d") }}</h4>
 	</div>
         <div>
-            {{ post.blocks.content|raw }}
-        </div>
-        {% if post.meta.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in post.meta.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
+        {% set break_array = post.blocks.content|split('<!-- more -->', 2) %}
+
+        {{ break_array[0]|raw }}
+
+        {% if break_array|length > 1 %}
+        <p>
+            <a href="{{ site.url }}{{ post.url }}">
+                Read more
+            </a>
+        </p>
         {% endif %}
+        </div>
     </article>
 {% endfor %}
 {% if page.pagination.previous_page or page.pagination.next_page %}

@@ -8,6 +8,7 @@ In the summer of 2012 I worked on the Ziggo TV Android app. That's almost 5 year
 Recently I've taken some first steps to get back into developing a new Android app.
 I'm glad to see some nice changes in Android development:
 
+<!-- more -->
 ### Android Studio
 
 Back then I did all my development in Eclipse. Android Studio would be available a year later.

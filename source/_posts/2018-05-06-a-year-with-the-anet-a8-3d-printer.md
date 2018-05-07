@@ -10,6 +10,7 @@ I decided to buy an Anet A8 for 2 reasons:
 - it's cheap
 - lots of upgrades available
 
+<!-- more -->
 I paid 160 EUR for the printer. It's possible to get it for a lower price as there are occasional promotion sales on sites like [Banggood.com](https://www.banggood.com/Anet-A8-3D-Printer-DIY-Kit-1_75mm-0_4mm-Support-ABS-PLA-HIPS-p-1130694.html?p=E8231110898371201705)
 
 ### Assembly

@@ -9,6 +9,7 @@ categories: [android]
 Now, it's time to convert this to [Kotlin](http://kotlinlang.org) code.
 Kotlin is a statically-typed programming language that runs on the Java Virtual Machine.
 
+<!-- more -->
 ### Install Kotlin plugin
 
 In Android Studio first download the Kotlin plugin.
