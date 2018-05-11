@@ -8,6 +8,9 @@
     "components/jquery": "~1.9.1",
     "components/highlightjs": "~7.3.0"
   },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
   "config": {
     "component-dir": "source/components"
   }
