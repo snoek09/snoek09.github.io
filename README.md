@@ -5,5 +5,8 @@ Sculpin Blog
 
 Dockerized for dev environment;
 
+- docker-compose build build
+- docker-compose build install
+
 - docker-compose run build all
 - docker-compose up -d blog
