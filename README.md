@@ -3,10 +3,14 @@
 Sculpin Blog
 ============
 
-Dockerized for dev environment;
+Dockerized for dev environment.
+
+### Setup
 
 - docker-compose build build
-- docker-compose build install
+- docker-compose run build install
+
+### Run
 
 - docker-compose run build all
 - docker-compose up -d blog
