@@ -1,7 +1,5 @@
 ---
 title: A Year with the Anet A8 3D Printer
-tags: [anet, a8]
-categories: [3d-printing]
 ---
 
 Last year, after using 3D Hubs several times, I decided to take the jump; getting myself a 3D printer.

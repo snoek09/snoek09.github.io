@@ -1,7 +1,5 @@
 ---
 title: Setting up Kotlin in Android Studio
-tags: [kotlin, android]
-categories: [android]
 ---
 
 [Last time](blog/2017/02/22/revisiting-android-development) I made a simple

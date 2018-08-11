@@ -9,8 +9,6 @@ $title = ucwords(str_replace('_', ' ', $argv[1]));
 $handle = fopen($file, 'w');
 $data = "---
 title: {$title}
-tags: []
-categories: []
 
 ---
 

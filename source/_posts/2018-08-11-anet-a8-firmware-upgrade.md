@@ -1,7 +1,5 @@
 ---
 title: Upgrading the Anet A8 firmware to Marlin 1.1.x
-tags: [anet, a8]
-categories: [3d-printing]
 ---
 
 The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
