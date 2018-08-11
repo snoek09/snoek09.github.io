@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Home
+title: Blog
 generator: pagination
 pagination:
-    max_per_page: 3
+    max_per_page: 10
 use:
     - posts
 ---
 {% for post in page.pagination.items %}
     <article>
         <header>
-            <h2>{{ post.title }}</h2>
+            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
         </header>
 	<div>
            <h4>{{ post.date|date("Y-m-d") }}</h4>
@@ -19,14 +19,6 @@ use:
         {% set break_array = post.blocks.content|split('<!-- more -->', 2) %}
 
         {{ break_array[0]|raw }}
-
-        {% if break_array|length > 1 %}
-        <p>
-            <a href="{{ site.url }}{{ post.url }}">
-                Read more
-            </a>
-        </p>
-        {% endif %}
         </div>
     </article>
 {% endfor %}
