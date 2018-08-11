@@ -8,23 +8,25 @@ use:
     - posts
 ---
 {% for post in page.pagination.items %}
-    <article>
-        <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-	<div>
-           <h4>{{ post.date|date("Y-m-d") }}</h4>
-	</div>
-        <div>
+<article>
+    <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+    <div>
+        <h4>{{ post.date|date("Y-m-d") }}</h4>
+    </div>
+    <div>
+    {% if loop.first %}
+        {{ post.blocks.content|raw }}
+    {% else %}
         {% set break_array = post.blocks.content|split('<!-- more -->', 2) %}
 
         {{ break_array[0]|raw }}
-        </div>
-    </article>
+    {% endif %}
+    </div>
+</article>
 {% endfor %}
 {% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav>
-        {% if page.pagination.previous_page %}<a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Posts</a>{% endif %}<br />
-        {% if page.pagination.next_page %}<a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Posts</a>{% endif %}<br />
-    </nav>
+<nav>
+    {% if page.pagination.previous_page %}<a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Posts</a>{% endif %}<br />
+    {% if page.pagination.next_page %}<a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Posts</a>{% endif %}<br />
+</nav>
 {% endif %}
