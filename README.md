@@ -14,3 +14,7 @@ Dockerized for dev environment.
 
 - docker-compose run build all
 - docker-compose up -d blog
+
+### Create post
+
+php touch.php getting_started_with_sculpin 2017-01-01
