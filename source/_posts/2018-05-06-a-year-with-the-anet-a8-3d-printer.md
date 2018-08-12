@@ -1,5 +1,7 @@
 ---
 title: A Year with the Anet A8 3D Printer
+hero: /images/anet-a8/anet-a8.jpg
+date_lastmod: 2018-08-12
 ---
 
 Last year, after using 3D Hubs several times, I decided to take the jump; getting myself a 3D printer.

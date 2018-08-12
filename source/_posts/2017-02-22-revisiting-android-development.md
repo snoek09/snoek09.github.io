@@ -1,5 +1,6 @@
 ---
 title: Revisiting Android Development
+date_lastmod: 2017-02-22
 ---
 
 In the summer of 2012 I worked on the Ziggo TV Android app. That's almost 5 years ago.

@@ -9,13 +9,25 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "author": "{{ site.author }}",
-    "datePublished": "{{ page.date|date('Y-m-d') }}",
-    "headline": "{{ page.title }}",
-    "publisher": {
-        "@type": "{{ site.author }}",
+    "author": {
+        "@type": "Person",
         "name": "{{ site.author }}"
-   }
+    },
+    "datePublished": "{{ page.date|date('Y-m-d') }}",
+    "dateModified": "{{ page.date_lastmod|date('Y-m-d')|default(page.date|date('Y-m-d')) }}",
+    "headline": "{{ page.title }}",
+    "image": {
+        "@type": "imageObject",
+        "url": "{{ site.url }}{{ page.hero }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GitHub",
+        "logo": {
+            "@type": "imageObject",
+            "url": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png"
+        }
+    }
 }
 </script>
 {% endblock %}
