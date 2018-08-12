@@ -5,6 +5,10 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="{{ site.twitter_creator }}" />
+<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:description" content="{{ page.blocks.content|slice(0,100)|striptags ~ '...' }}" />
+<meta name="twitter:image" content="{{ site.url }}{{ page.hero }}" />
+
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ page.blocks.content|slice(0,200)|striptags ~ '...' }}" />
