@@ -1,32 +1,47 @@
 {% extends "default" %}
 
 {% block head_meta %}
-    <meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block json_ld %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "author": "{{ site.author }}",
+    "datePublished": "{{ page.date|date('Y-m-d') }}",
+    "headline": "{{ page.title }}",
+    "publisher": {
+        "@type": "{{ site.author }}",
+        "name": "{{ site.author }}"
+   }
+}
+</script>
 {% endblock %}
 
 {% block content_wrapper %}
-    <article>
-        <h2>{{ page.title }}</h2>
-        <div>
-           <h4>{{ page.date|date("Y-m-d") }}</h4>
-	</div>
-        <div>
-            {{ page.blocks.content|raw }}
-        </div>
-        {% if page.previous_post or page.next_post %}
-            <nav class="article">
-                <ul>
-                    {% if page.next_post %}
-                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
-                    {% endif %}
-                    {% if page.previous_post %}
-                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        {% endif %}
-    </article>
-
+<article>
+    <h2>{{ page.title }}</h2>
+    <div>
+       <h4>{{ page.date|date("Y-m-d") }}</h4>
+    </div>
+    <div>
+        {{ page.blocks.content|raw }}
+    </div>
+    {% if page.previous_post or page.next_post %}
+    <nav class="article">
+        <ul>
+            {% if page.next_post %}
+                <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+            {% endif %}
+            {% if page.previous_post %}
+                <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</article>
 
 {% if site.disqus.shortname and site.disqus.shortname != '' %}
 <div id="disqus_thread"></div>
