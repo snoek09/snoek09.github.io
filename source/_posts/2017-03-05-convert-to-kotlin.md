@@ -4,7 +4,7 @@ date_lastmod: 2017-03-05
 hero: /images/kotlin-logo.png
 ---
 
-[Last time](blog/2017/02/22/revisiting-android-development) I made a simple
+[Last time](/blog/2017/02/22/revisiting-android-development/) I made a simple
 [Android app using the Spotify SDK](https://github.com/snoek09/SpotifyAndroidSdkExample).
 Now, it's time to convert this to [Kotlin](http://kotlinlang.org) code.
 Kotlin is a statically-typed programming language that runs on the Java Virtual Machine.

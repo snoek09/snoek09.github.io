@@ -6,7 +6,7 @@ date_lastmod: 2018-08-12
 
 The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
 One of the most important features it's missing, is a security check on the heating elements.
-In my post about [Anet A8 upgrades](blog/2018/05/06/a-year-with-the-anet-a8-3d-printer) you can
+In my post about [Anet A8 upgrades](/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/) you can
 read what can happen to the heat bed connector.
 
 <!-- more -->
