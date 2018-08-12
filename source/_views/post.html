@@ -2,6 +2,13 @@
 
 {% block head_meta %}
 <meta name="robots" content="index, follow">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@snoek09" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.blocks.content|slice(0,200)|striptags ~ '...' }}" />
+<meta property="og:image" content="{{ site.url }}{{ page.hero }}" />
 {% endblock %}
 
 {% block json_ld %}
