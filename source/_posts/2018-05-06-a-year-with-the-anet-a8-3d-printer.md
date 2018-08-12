@@ -30,25 +30,35 @@ Please note I only print with PLA filament.
 
 ### Upgrades
 
-The Anet A8 is a clone of Prusa i3. There are lots of modifications on thingiverse to make it look even more like a Prusa i3.
+The Anet A8 is a clone of the Prusa i3. There are lots of modifications on thingiverse to make it look even more like a Prusa i3.
 One of the nicest modifications I did was the spool holder that goes on top of the frame. This saves some space and causes
 the filament to go in a straight line to the extruder. The printer could now fit on a IKEA Lack side table instead of taking up
 all my desk space.
 
-One of the things that was very time consuming with this printer was levelling the bed. Adding wing nut bed level screw knobs
+#### Bed leveling
+
+One of the things that was very time consuming with this printer was leveling the bed. Adding wing nut bed level screw knobs
 and spring bushings made it a lot easier to level the bed. I had to drill out the holes on the heat bed a bit 
 as these were threaded.
 
+#### Noise reduction
+
 With the printer on the small side table it made quite some noise while printing. I printed 6 vibration dampers to reduce this noise.
-Also I changed the cooling fan speed to 50% in my slicer software.
+Also I changed the cooling fan speed to 50% in my slicer software, [Simplify3D](https://www.simplify3d.com/).
+
+#### Hotbed connector
 
 Another known problem with this printer is the hotbed connector. I noticed the hotbed was not heating up properly and saw the plastic
 connector got burned on both sides. I fixed this by soldering the red and black wire directly to the hotbed. To prevent issues with this
 in the future I added a cable strain relief. 
 
+#### MOSFET
+
 One of the last thing I installed was a [MOSFET](https://www.banggood.com/3D-Printer-Parts-General-Add-on-Heated-Bed-Power-Expansion-Module-High-Power-For-Chitu-Motherboard-p-1086965.html?p=E8231110898371201705). I've added it to move some of the current from the mainboard. Older versions of the mainboard
 had different connectors which could melt if not properly connected. The hotbed is now powered through the MOSFET which removes some
 stress for the main board.
+
+#### All other upgrades
 
 Some other modifications I printed which I think are nice but not really needed;
 
