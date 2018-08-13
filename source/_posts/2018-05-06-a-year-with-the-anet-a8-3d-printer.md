@@ -24,7 +24,7 @@ I was very impressed with the first prints. I only had to tighten the belts a bi
 
 ### Printing bed surface
 
-The printer has some yellow tape on the hotbed. This was coming of fast after removing the first few prints from the bed.
+The printer has some yellow tape on the hotbed. This was coming off fast after removing the first few prints from the bed.
 I needed a better solution for this so I got a [215 x 215 x 3 mm glass plate](https://www.velleman.eu/products/view/?id=417314)
 The glass plate causes a smooth side when printing which I think is really nice. When the bed is leveled properly it sticks
 very well. In case of smaller prints with less contact to the bed I also print a raft so the print won't get loose while printing.
