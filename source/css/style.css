@@ -1,7 +1,5 @@
-h4 small {
-    display: block;
-    font-size: 60%;
-    color: #888;
+article {
+    margin-bottom: 2em;
 }
 
 .mainContent, footer.container {
