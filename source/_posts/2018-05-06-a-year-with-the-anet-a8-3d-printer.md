@@ -72,10 +72,10 @@ Some other modifications I printed which I think are nice but not really needed;
 
 The list of all the upgrades I've printed: [https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades](https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades)
 
-![Anet A8 with 3D printed upgrades](/images/anet-a8/anet-a8.jpg){.img-responsive}
+![Anet A8 with 3D printed upgrades](/images/anet-a8/anet-a8.jpg){.img-fluid}
 
-![Spool holder](/images/anet-a8/spool-holder.jpg){.img-responsive}
+![Spool holder](/images/anet-a8/spool-holder.jpg){.img-fluid}
 
-![Heated bed upgrades](/images/anet-a8/heated-bed.jpg){.img-responsive}
+![Heated bed upgrades](/images/anet-a8/heated-bed.jpg){.img-fluid}
 
-![Cable strain relief](/images/anet-a8/cable-strain-relief.jpg){.img-responsive}
+![Cable strain relief](/images/anet-a8/cable-strain-relief.jpg){.img-fluid}

@@ -29,36 +29,36 @@ The board definition files enable the Arduino IDE to compile firmware (in this c
 
 Copy the anet folder to the Aruindo\hardware folder. Create the hardware folder if it doesn't exist.
 
-![Anet A8 board defination files](/images/marlin/board-definition-files.png){.img-responsive}
+![Anet A8 board defination files](/images/marlin/board-definition-files.png){.img-fluid}
 
 ### Copy Marlin example configuration 
 
 Unzip the Marlin firmware and go to the Marlin\example-configurations\Anet\A8 folder:
 
-![Marlin A8 configuration files source](/images/marlin/marlin-a8-configuration-source.png){.img-responsive}
+![Marlin A8 configuration files source](/images/marlin/marlin-a8-configuration-source.png){.img-fluid}
 
 Copy the 2 configuration files to the Marlin folder:
 
-![Marlin A8 configuration files destination](/images/marlin/marlin-a8-configuration-destination.png){.img-responsive}
+![Marlin A8 configuration files destination](/images/marlin/marlin-a8-configuration-destination.png){.img-fluid}
 
 Open the Marlin.ino file in Arduino IDE:
 
-![Arduino IDE - Open Marlin.ino](/images/marlin/arduino-ide-open-marlin-ino.png){.img-responsive}
+![Arduino IDE - Open Marlin.ino](/images/marlin/arduino-ide-open-marlin-ino.png){.img-fluid}
 
 Connect your printer to your computer using USB.
 Make sure that Anet V1.0 is selected as Board:
 
-![Arduino IDE - Select Anet Board](/images/marlin/arduino-ide-select-board.png){.img-responsive}
+![Arduino IDE - Select Anet Board](/images/marlin/arduino-ide-select-board.png){.img-fluid}
 
 Port should be set to USB:
 
-![Arduino IDE - Select USB Port](/images/marlin/arduino-ide-select-port.png){.img-responsive}
+![Arduino IDE - Select USB Port](/images/marlin/arduino-ide-select-port.png){.img-fluid}
 
 Upload the firmware by clicking the upload button:
 
-![Arduino IDE - Upload button](/images/marlin/arduino-ide-upload.png){.img-responsive}
+![Arduino IDE - Upload button](/images/marlin/arduino-ide-upload.png){.img-fluid}
 
 When the update is done the printer will restart and your printer menu will look like this:
 
-![Updated printer menu](/images/marlin/updated-menu.jpg){.img-responsive}
+![Updated printer menu](/images/marlin/updated-menu.jpg){.img-fluid}
 
