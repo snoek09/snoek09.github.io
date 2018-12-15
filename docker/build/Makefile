@@ -9,6 +9,9 @@ nothing:
 install:
     composer install
 
+update:
+    composer update
+
 # Generate dev output
 all:
     vendor/bin/sculpin --project-dir=/opt --env=dev generate
