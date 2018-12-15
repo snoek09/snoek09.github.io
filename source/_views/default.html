@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{{ page.title }}{% endblock %} &dash; {{ site.title }}</title>
+        <title>
+            {% if page.title %}
+                {% block title %}{{ page.title }}{% endblock %} &dash; {{ site.title }}
+            {% else %}
+                {{ site.title }}
+            {% endif %}
+        </title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
