@@ -11,3 +11,23 @@ footer.container {
     padding: 30px 0;
     border-top: 1px dashed #aaa;
 }
+
+a {
+    color: darkorange;
+}
+
+a:hover {
+    color: orangered;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+.time {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 600;
+}

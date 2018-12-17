@@ -9,9 +9,7 @@ use:
 {% for post in page.pagination.items %}
 <article>
     <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-    <div>
-        <h4>{{ post.date|date("Y-m-d") }}</h4>
-    </div>
+    <div class="time">{{ page.date|date("l, F  j, Y") }}</div>
     <div>
     {% if loop.first %}
         {{ post.blocks.content|raw }}
