@@ -6,14 +6,14 @@ permalink: sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}</loc>
-    <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
+    <lastmod>{{ site.calculated_date|date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   {% for post in data.posts %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date|date('c') }}</lastmod>
+    <lastmod>{{ post.date|date('Y-m-d') }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
