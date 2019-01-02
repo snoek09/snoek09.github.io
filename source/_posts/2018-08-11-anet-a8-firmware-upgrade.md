@@ -27,17 +27,17 @@ Depending on your operating system the location of the Arduino files will be sli
 
 The board definition files enable the Arduino IDE to compile firmware (in this case Marlin) for Anet 3D printers.
 
-Copy the anet folder to the Aruindo\hardware folder. Create the hardware folder if it doesn't exist.
+Copy the `anet` folder to the `Aruindo\hardware` folder. Create the `hardware` folder if it doesn't exist.
 
 ![Anet A8 board defination files](/images/marlin/board-definition-files.png){.img-fluid}
 
 ### Copy Marlin example configuration 
 
-Unzip the Marlin firmware and go to the Marlin\example-configurations\Anet\A8 folder:
+Unzip the Marlin firmware and go to the `Marlin\example-configurations\Anet\A8 folder`:
 
 ![Marlin A8 configuration files source](/images/marlin/marlin-a8-configuration-source.png){.img-fluid}
 
-Copy the 2 configuration files to the Marlin folder:
+Copy the 2 configuration files to the `Marlin` folder:
 
 ![Marlin A8 configuration files destination](/images/marlin/marlin-a8-configuration-destination.png){.img-fluid}
 
