@@ -33,7 +33,7 @@ Copy the `anet` folder to the `Aruindo\hardware` folder. Create the `hardware` f
 
 ### Copy Marlin example configuration 
 
-Unzip the Marlin firmware and go to the `Marlin\example-configurations\Anet\A8 folder`:
+Unzip the Marlin firmware and go to the `Marlin\example-configurations\Anet\A8` folder:
 
 ![Marlin A8 configuration files source](/images/marlin/marlin-a8-configuration-source.png){.img-fluid}
 
