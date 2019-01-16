@@ -47,7 +47,7 @@
 {% block content_wrapper %}
 <article>
     <h2>{{ page.title }}</h2>
-    <div class="time">{{ page.date|date("M j, Y") }}</div>
+    <time>{{ page.date|date("M j, Y") }}</time>
     <div>
         {{ page.blocks.content|raw }}
     </div>

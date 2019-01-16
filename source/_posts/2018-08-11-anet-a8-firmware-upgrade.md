@@ -1,5 +1,5 @@
 ---
-title: Upgrading the Anet A8 firmware to Marlin 1.1.x
+title: Upgrading the Anet A8 firmware to Marlin 1.1.9
 hero: /images/marlin/updated-menu.jpg
 date_lastmod: 2018-08-12
 ---
@@ -18,7 +18,7 @@ you need to upgrade to Marlin. This also requires some small changes to the Marl
 
 - [Arduino IDE software](https://www.arduino.cc/en/Main/Software)
 - [Anet A8 board definition for Arduino](https://github.com/SkyNet3D/anet-board)
-- [Marlin firmware](https://github.com/MarlinFirmware/Marlin/archive/1.1.x.zip)
+- [Marlin firmware](https://github.com/MarlinFirmware/Marlin/archive/1.1.9.zip)
 
 Instructions and screenshots below are from Ubuntu Linux.
 Depending on your operating system the location of the Arduino files will be slightly different.
