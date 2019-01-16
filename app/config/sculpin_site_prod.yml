@@ -1,5 +1,4 @@
 imports:
     - sculpin_site.yml
 
-google_analytics_tracking_id: UA-59541230-1
 url: https://www.henrysnoek.com
