@@ -24,7 +24,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="{{ site.url }}/components/highlightjs/styles/github.css"/>
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml"
           title="{{ site.title }} activity feed"/>
     {% block json_ld %}
@@ -76,9 +75,6 @@
         crossorigin="anonymous"></script>
 {% block scripts %}
 {% endblock %}
-
-<script src="{{ site.url }}/components/highlightjs/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 {% block scripts_after %}
 {% endblock %}

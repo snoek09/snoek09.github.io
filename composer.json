@@ -3,8 +3,7 @@
     "sculpin/sculpin": "~2.0",
     "dflydev/embedded-composer-console": "@dev",
     "dflydev/embedded-composer-core": "@dev",
-    "composer/composer": "@dev",
-    "components/highlightjs": "~9.12.0"
+    "composer/composer": "@dev"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"

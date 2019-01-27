@@ -19,7 +19,7 @@ In this example it will be configured manually:
 - In `build.gradle` add the different version string and classpath for the plugin.
 These values will vary depending on the version you're using:
 
-```gradle
+```
 buildscript {
     ext.support_version = '25.2.0'
     ext.kotlin_version = '1.1.0'
@@ -41,7 +41,7 @@ allprojects {
 
 - Add the new dependency in `app/build.gradle`:
 
-```gradle
+```
 ...
     compile "com.android.support:appcompat-v7:$support_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
