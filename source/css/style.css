@@ -27,5 +27,7 @@ time {
 }
 
 pre {
+    white-space: pre-wrap;
     font-size: 12px;
+    background: #EEEEEE;
 }
