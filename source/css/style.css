@@ -25,3 +25,7 @@ time {
     display: block;
     font-weight: 600;
 }
+
+pre {
+    font-size: 12px;
+}
