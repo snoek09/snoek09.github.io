@@ -1,7 +1,7 @@
 ---
 title: Anet A8 to AM8 conversion
 hero: /images/am8-conversion/am8-conversion.jpg
-date_lastmod: 2019-08-17
+date_lastmod: 2019-08-18
 ---
 
 The acrylic frame that came with my Anet A8 is not the most solid construction.
@@ -43,6 +43,8 @@ Some other parts that have been upgraded/added during this conversion;
 - mainboard: [Anet A8 board version 1.7](http://s.click.aliexpress.com/e/Tk7sSCY); added fuse and 24 volt support
 - [12v to 5v step down converter](http://s.click.aliexpress.com/e/rbeaPT6); power Pi Zero from power supply
 - 8mm braided cable sleeve
+
+All 3d printed parts are listed in a [AM8 Thingiverse collection](https://www.thingiverse.com/snoek09/collections/am8).
 
 *This post contains AliExpress affiliate links, which means I receive a commission if you click a link and purchase something. While clicking these links won't cost you any extra money, they will help me keep this site up and running. Thank you for your support.*
 
