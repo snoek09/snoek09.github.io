@@ -1,13 +1,13 @@
 ---
-title: Anet A8 to AM8 conversion
-hero: /images/am8-conversion/am8-conversion.jpg
-date_lastmod: 2019-08-18
+title: Anet A8 - AM8 Aluminium Frame Build
+hero: /images/am8-build/am8-build.jpg
+date_lastmod: 2019-10-13
 ---
 
 The acrylic frame that came with my Anet A8 is not the most solid construction.
 Adding a [spool holder on top](/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/) of it doesn't make things better.
 
-One of the bigger upgrades I could do is the AM8 metal frame conversion.
+One of the bigger upgrades I could do is the AM8 metal frame build.
 This upgrade will make a sturdy frame while re-using as many components as possible.
 <!-- more -->
 
@@ -37,7 +37,7 @@ Only the [extruder button](https://www.thingiverse.com/thing:2501601) is 3D prin
 I didn't print the case for the LCD as I don't need it; I'm using a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/) with [OctoPrint](https://octoprint.org/) and [Printoid](https://printoid.net/).
 This way I can control and monitor prints from my smartphone. I can even watch the print in progress as the Pi Zero has a camera attached to it.
 
-Some other parts that have been upgraded/added during this conversion;
+Some other parts that have been upgraded/added during this build;
 
 - Z-axis couplers; plum shaft
 - mainboard: [Anet A8 board version 1.7](http://s.click.aliexpress.com/e/Tk7sSCY); added fuse and 24 volt support
@@ -48,5 +48,5 @@ All 3d printed parts are listed in a [AM8 Thingiverse collection](https://www.th
 
 *This post contains AliExpress affiliate links, which means I receive a commission if you click a link and purchase something. While clicking these links won't cost you any extra money, they will help me keep this site up and running. Thank you for your support.*
 
-![Anet A8 - AM8 conversion](/images/am8-conversion/am8-conversion.jpg){.img-fluid}
+![Anet A8 - AM8 build](/images/am8-build/am8-build.jpg){.img-fluid}
 
