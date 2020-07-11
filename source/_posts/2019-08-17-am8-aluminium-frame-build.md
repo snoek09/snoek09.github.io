@@ -34,7 +34,7 @@ Only the [extruder button](https://www.thingiverse.com/thing:2501601) is 3D prin
 
 ### Optional parts
 
-I didn't print the case for the LCD as I don't need it; I'm using a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/) with [OctoPrint](https://octoprint.org/) and [Printoid](https://printoid.net/).
+I didn't print the case for the LCD as I don't need it; I'm using a Raspberry Pi with [OctoPrint](https://octoprint.org/) and [Printoid](https://printoid.net/).
 This way I can control and monitor prints from my smartphone. I can even watch the print in progress as the Pi Zero has a camera attached to it.
 
 **Update:** it's not recommended to use a Raspberry Pi Zero W with OctoPrint. Severe performance issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively impacting printing quality. More info in [this github issue](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
