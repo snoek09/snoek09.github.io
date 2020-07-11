@@ -3,16 +3,16 @@
 .PHONY: nothing
 
 nothing:
-    @echo Nothing to be done
+	@echo Nothing to be done
 
 # Install all dependencies defined in composer.json
 install:
-    composer install
+	composer install
 
 update:
-    composer update
+	composer update
 
 # Generate dev output
 all:
-    vendor/bin/sculpin --project-dir=/opt --env=dev generate
+	vendor/bin/sculpin --project-dir=/opt --env=dev generate
 
