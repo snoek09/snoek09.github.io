@@ -19,7 +19,7 @@ This upgrade will make a sturdy frame while re-using as many components as possi
 
 Check the [BOM](https://cdn.thingiverse.com/assets/a3/bd/fb/22/18/BOM.pdf) for screws, nuts and other materials you might need.
 
-For connecting bolts to the extrusion I used [M5 T nuts](http://s.click.aliexpress.com/e/bP1e6NnE).
+For connecting bolts to the extrusion I used M5 T nuts.
 
 ### Missing Z-axis corner bracket
 
@@ -42,13 +42,11 @@ This way I can control and monitor prints from my smartphone. I can even watch t
 Some other parts that have been upgraded/added during this build;
 
 - Z-axis couplers; plum shaft
-- mainboard: [Anet A8 board version 1.7](http://s.click.aliexpress.com/e/Tk7sSCY); added fuse and 24 volt support
-- [12v to 5v step down converter](http://s.click.aliexpress.com/e/rbeaPT6); power Pi Zero from power supply
+- mainboard: Anet A8 board version 1.7; added fuse and 24 volt support
+- 12v to 5v step down converter; power Pi Zero from power supply
 - 8mm braided cable sleeve
 
 All 3d printed parts are listed in a [AM8 Thingiverse collection](https://www.thingiverse.com/snoek09/collections/am8).
-
-*This post contains AliExpress affiliate links, which means I receive a commission if you click a link and purchase something. While clicking these links won't cost you any extra money, they will help me keep this site up and running. Thank you for your support.*
 
 ![Anet A8 - AM8 build](/images/am8-build/am8-build.jpg){.img-fluid}
 
