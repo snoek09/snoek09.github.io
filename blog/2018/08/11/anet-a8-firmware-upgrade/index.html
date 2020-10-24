@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+                Upgrading the Anet A8 firmware to Marlin 1.1.9 &dash; Henry Snoek&#039;s Blog
+            </title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@snoek09" />
+<meta name="twitter:title" content="Upgrading the Anet A8 firmware to Marlin 1.1.9" />
+<meta name="twitter:description" content="The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
+On..." />
+<meta name="twitter:image" content="https://www.henrysnoek.com/images/marlin/updated-menu.jpg" />
+
+<meta property="og:url" content="https://www.henrysnoek.com/blog/2018/08/11/anet-a8-firmware-upgrade/" />
+<meta property="og:title" content="Upgrading the Anet A8 firmware to Marlin 1.1.9" />
+<meta property="og:description" content="The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
+One of the most important features it&#039;s missing, is a security check on the heating elements.
+In my po..." />
+<meta property="og:image" content="https://www.henrysnoek.com/images/marlin/updated-menu.jpg" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://www.henrysnoek.com/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="alternate" type="application/atom+xml" href="https://www.henrysnoek.com/atom.xml"
+          title="Henry Snoek&#039;s Blog activity feed"/>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "author": {
+        "@type": "Person",
+        "name": "Henry Snoek"
+    },
+    "datePublished": "2018-08-11",
+    "dateModified": "2018-08-12",
+    "headline": "Upgrading the Anet A8 firmware to Marlin 1.1.9",
+    "image": {
+        "@type": "imageObject",
+        "url": "https://www.henrysnoek.com/images/marlin/updated-menu.jpg"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GitHub",
+        "logo": {
+            "@type": "imageObject",
+            "url": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png"
+        }
+    },
+    "mainEntityOfPage": "https://www.henrysnoek.com/blog/2018/08/11/anet-a8-firmware-upgrade/"
+}
+</script>
+                </head>
+<body>
+
+<nav class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="brand" href="https://www.henrysnoek.com/">Henry Snoek&#039;s Blog</a>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar"><span class="sr-only">Toggle navigation</span> ☰
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="https://www.henrysnoek.com/about">about</a></li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li><a href="https://twitter.com/snoek09" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li><a href="https://github.com/snoek09" class="nav-link"><i class="fab fa-github fa-lg"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mainContent container">
+    <div class="row-fluid">
+        <div class="span12">
+            <article>
+    <h2>Upgrading the Anet A8 firmware to Marlin 1.1.9</h2>
+    <time>Aug 11, 2018</time>
+    <div>
+        <p>The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
+One of the most important features it's missing, is a security check on the heating elements.
+In my post about <a href="/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/">Anet A8 upgrades</a> you can
+read what can happen to the heat bed connector.</p>
+
+<p><!-- more -->
+With this upgrade the Anet A8 will be safer to use. It will stop heating the heat bed and extruder element
+after it reaches a certain temperature. Also if you want to use auto-levelling of the heat bed using a sensor
+you need to upgrade to Marlin. This also requires some small changes to the Marlin code which will not be discussed here.</p>
+
+<h3 id="what-you-need">What you need</h3>
+
+<ul>
+<li><a href="https://www.arduino.cc/en/Main/Software">Arduino IDE software</a></li>
+<li><a href="https://github.com/SkyNet3D/anet-board">Anet A8 board definition for Arduino</a></li>
+<li><a href="https://github.com/MarlinFirmware/Marlin/archive/1.1.9.zip">Marlin firmware</a></li>
+</ul>
+
+<p>Instructions and screenshots below are from Ubuntu Linux.
+Depending on your operating system the location of the Arduino files will be slightly different.</p>
+
+<h3 id="move-anet-a8-board-definition-files">Move Anet A8 board definition files</h3>
+
+<p>The board definition files enable the Arduino IDE to compile firmware (in this case Marlin) for Anet 3D printers.</p>
+
+<p>Copy the <code>anet</code> folder to the <code>Aruindo\hardware</code> folder. Create the <code>hardware</code> folder if it doesn't exist.</p>
+
+<p><img src="/images/marlin/board-definition-files.png" alt="Anet A8 board defination files" title="" class="img-fluid" /></p>
+
+<h3 id="copy-marlin-example-configuration">Copy Marlin example configuration</h3>
+
+<p>Unzip the Marlin firmware and go to the <code>Marlin\example-configurations\Anet\A8</code> folder:</p>
+
+<p><img src="/images/marlin/marlin-a8-configuration-source.png" alt="Marlin A8 configuration files source" title="" class="img-fluid" /></p>
+
+<p>Copy the 2 configuration files to the <code>Marlin</code> folder:</p>
+
+<p><img src="/images/marlin/marlin-a8-configuration-destination.png" alt="Marlin A8 configuration files destination" title="" class="img-fluid" /></p>
+
+<p>Open the Marlin.ino file in Arduino IDE:</p>
+
+<p><img src="/images/marlin/arduino-ide-open-marlin-ino.png" alt="Arduino IDE - Open Marlin.ino" title="" class="img-fluid" /></p>
+
+<p>Connect your printer to your computer using USB.
+Make sure that Anet V1.0 is selected as Board:</p>
+
+<p><img src="/images/marlin/arduino-ide-select-board.png" alt="Arduino IDE - Select Anet Board" title="" class="img-fluid" /></p>
+
+<p>Port should be set to USB:</p>
+
+<p><img src="/images/marlin/arduino-ide-select-port.png" alt="Arduino IDE - Select USB Port" title="" class="img-fluid" /></p>
+
+<p>Upload the firmware by clicking the upload button:</p>
+
+<p><img src="/images/marlin/arduino-ide-upload.png" alt="Arduino IDE - Upload button" title="" class="img-fluid" /></p>
+
+<p>When the update is done the printer will restart and your printer menu will look like this:</p>
+
+<p><img src="/images/marlin/updated-menu.jpg" alt="Updated printer menu" title="" class="img-fluid" /></p>
+
+    </div>
+        <nav class="article">
+        <ul>
+                            <li>Next: <a class="next" href="https://www.henrysnoek.com/blog/2019/08/17/am8-aluminium-frame-build/" title="Anet A8 - AM8 Aluminium Frame Build"><span class="title">Anet A8 - AM8 Aluminium Frame Build</span></a></li>
+                                        <li>Previous: <a class="previous" href="https://www.henrysnoek.com/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/" title="A Year with the Anet A8 3D Printer"><span class="title">A Year with the Anet A8 3D Printer</span></a></li>
+                    </ul>
+    </nav>
+    </article>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

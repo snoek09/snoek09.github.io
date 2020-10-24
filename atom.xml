@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Henry Snoek&#039;s Blog]]></title>
+    <link href="https://www.henrysnoek.com/atom.xml" rel="self"/>
+    <link href="https://www.henrysnoek.com/"/>
+    <updated>2020-10-24T11:27:36+00:00</updated>
+    <id>https://www.henrysnoek.com/</id>
+            <author>
+            <name><![CDATA[Henry Snoek]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Anet A8 - AM8 Aluminium Frame Build]]></title>
+            <link href="https://www.henrysnoek.com/blog/2019/08/17/am8-aluminium-frame-build/"/>
+            <updated>2019-08-17T00:00:00+00:00</updated>
+            <id>https://www.henrysnoek.com/blog/2019/08/17/am8-aluminium-frame-build/</id>
+            <content type="html"><![CDATA[<p>The acrylic frame that came with my Anet A8 is not the most solid construction.
+Adding a <a href="/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/">spool holder on top</a> of it doesn't make things better.</p>
+
+<p>One of the bigger upgrades I could do is the AM8 metal frame build.
+This upgrade will make a sturdy frame while re-using as many components as possible.
+<!-- more --></p>
+
+<h3 id="parts-needed">Parts needed</h3>
+
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2657605">Reinforced AM8 frame parts</a></li>
+<li><a href="https://www.thingiverse.com/thing:2263216">Other AM8 frame parts</a></li>
+<li><a href="https://www.dold-mechatronik.de/AM8-Aluprofile-und-12-Winkel-20x20">Aluminium 20x20 profile and corners set</a></li>
+</ul>
+
+<p>Check the <a href="https://cdn.thingiverse.com/assets/a3/bd/fb/22/18/BOM.pdf">BOM</a> for screws, nuts and other materials you might need.</p>
+
+<p>For connecting bolts to the extrusion I used M5 T nuts.</p>
+
+<h3 id="missing-z-axis-corner-bracket">Missing Z-axis corner bracket</h3>
+
+<p>The 2020 aluprofile set from dold-mechatronik is convenient though be aware the the corner brackets won't fit on the Z-axis connection.
+For this I printed a few <a href="https://www.thingiverse.com/thing:3140856">Z corner brackets</a>.</p>
+
+<h3 id="bowden-extruder-parts">Bowden extruder parts</h3>
+
+<p>A while ago I have changed the standard extruder with a bowden extruder. I find it a lot easier to change the filament this way.
+Luckily there's also a <a href="https://www.thingiverse.com/thing:2383009">bowden extruder mount for the AM8</a>. It re-uses most parts of the original extruder.
+Only the <a href="https://www.thingiverse.com/thing:2501601">extruder button</a> is 3D printed.</p>
+
+<h3 id="optional-parts">Optional parts</h3>
+
+<p>I didn't print the case for the LCD as I don't need it; I'm using a Raspberry Pi with <a href="https://octoprint.org/">OctoPrint</a> and <a href="https://printoid.net/">Printoid</a>.
+This way I can control and monitor prints from my smartphone. I can even watch the print in progress as the Pi Zero has a camera attached to it.</p>
+
+<p><strong>Update:</strong> it's not recommended to use a Raspberry Pi Zero W with OctoPrint. Severe performance issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively impacting printing quality. More info in <a href="https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963">this github issue</a>.</p>
+
+<p>Some other parts that have been upgraded/added during this build;</p>
+
+<ul>
+<li>Z-axis couplers; plum shaft</li>
+<li>mainboard: Anet A8 board version 1.7; added fuse and 24 volt support</li>
+<li>12v to 5v step down converter; power Pi Zero from power supply</li>
+<li>8mm braided cable sleeve</li>
+</ul>
+
+<p>All 3d printed parts are listed in a <a href="https://www.thingiverse.com/snoek09/collections/am8">AM8 Thingiverse collection</a>.</p>
+
+<p><img src="/images/am8-build/am8-build.jpg" alt="Anet A8 - AM8 build" title="" class="img-fluid" /></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Upgrading the Anet A8 firmware to Marlin 1.1.9]]></title>
+            <link href="https://www.henrysnoek.com/blog/2018/08/11/anet-a8-firmware-upgrade/"/>
+            <updated>2018-08-11T00:00:00+00:00</updated>
+            <id>https://www.henrysnoek.com/blog/2018/08/11/anet-a8-firmware-upgrade/</id>
+            <content type="html"><![CDATA[<p>The firmware of the Anet A8 3D printer is based on Marlin. This is an outdated version though.
+One of the most important features it's missing, is a security check on the heating elements.
+In my post about <a href="/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/">Anet A8 upgrades</a> you can
+read what can happen to the heat bed connector.</p>
+
+<p><!-- more -->
+With this upgrade the Anet A8 will be safer to use. It will stop heating the heat bed and extruder element
+after it reaches a certain temperature. Also if you want to use auto-levelling of the heat bed using a sensor
+you need to upgrade to Marlin. This also requires some small changes to the Marlin code which will not be discussed here.</p>
+
+<h3 id="what-you-need">What you need</h3>
+
+<ul>
+<li><a href="https://www.arduino.cc/en/Main/Software">Arduino IDE software</a></li>
+<li><a href="https://github.com/SkyNet3D/anet-board">Anet A8 board definition for Arduino</a></li>
+<li><a href="https://github.com/MarlinFirmware/Marlin/archive/1.1.9.zip">Marlin firmware</a></li>
+</ul>
+
+<p>Instructions and screenshots below are from Ubuntu Linux.
+Depending on your operating system the location of the Arduino files will be slightly different.</p>
+
+<h3 id="move-anet-a8-board-definition-files">Move Anet A8 board definition files</h3>
+
+<p>The board definition files enable the Arduino IDE to compile firmware (in this case Marlin) for Anet 3D printers.</p>
+
+<p>Copy the <code>anet</code> folder to the <code>Aruindo\hardware</code> folder. Create the <code>hardware</code> folder if it doesn't exist.</p>
+
+<p><img src="/images/marlin/board-definition-files.png" alt="Anet A8 board defination files" title="" class="img-fluid" /></p>
+
+<h3 id="copy-marlin-example-configuration">Copy Marlin example configuration</h3>
+
+<p>Unzip the Marlin firmware and go to the <code>Marlin\example-configurations\Anet\A8</code> folder:</p>
+
+<p><img src="/images/marlin/marlin-a8-configuration-source.png" alt="Marlin A8 configuration files source" title="" class="img-fluid" /></p>
+
+<p>Copy the 2 configuration files to the <code>Marlin</code> folder:</p>
+
+<p><img src="/images/marlin/marlin-a8-configuration-destination.png" alt="Marlin A8 configuration files destination" title="" class="img-fluid" /></p>
+
+<p>Open the Marlin.ino file in Arduino IDE:</p>
+
+<p><img src="/images/marlin/arduino-ide-open-marlin-ino.png" alt="Arduino IDE - Open Marlin.ino" title="" class="img-fluid" /></p>
+
+<p>Connect your printer to your computer using USB.
+Make sure that Anet V1.0 is selected as Board:</p>
+
+<p><img src="/images/marlin/arduino-ide-select-board.png" alt="Arduino IDE - Select Anet Board" title="" class="img-fluid" /></p>
+
+<p>Port should be set to USB:</p>
+
+<p><img src="/images/marlin/arduino-ide-select-port.png" alt="Arduino IDE - Select USB Port" title="" class="img-fluid" /></p>
+
+<p>Upload the firmware by clicking the upload button:</p>
+
+<p><img src="/images/marlin/arduino-ide-upload.png" alt="Arduino IDE - Upload button" title="" class="img-fluid" /></p>
+
+<p>When the update is done the printer will restart and your printer menu will look like this:</p>
+
+<p><img src="/images/marlin/updated-menu.jpg" alt="Updated printer menu" title="" class="img-fluid" /></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[A Year with the Anet A8 3D Printer]]></title>
+            <link href="https://www.henrysnoek.com/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/"/>
+            <updated>2018-05-06T00:00:00+00:00</updated>
+            <id>https://www.henrysnoek.com/blog/2018/05/06/a-year-with-the-anet-a8-3d-printer/</id>
+            <content type="html"><![CDATA[<p>Last year, after using 3D Hubs several times, I decided to take the jump; getting myself a 3D printer.
+I decided to buy an Anet A8 for 2 reasons:</p>
+
+<ul>
+<li>it's cheap</li>
+<li>lots of upgrades available</li>
+</ul>
+
+<p><!-- more -->
+I paid 160 EUR for the printer. It's possible to get it for a lower price as there are occasional promotion sales on sites like <a href="https://www.banggood.com/Anet-A8-3D-Printer-DIY-Kit-1_75mm-0_4mm-Support-ABS-PLA-HIPS-p-1130694.html?p=E8231110898371201705">Banggood.com</a></p>
+
+<h3 id="assembly">Assembly</h3>
+
+<p>The assembly went quite smooth, the hardest part was removing all the protective tape from the acrylic parts.
+There's just one thing to be aware of; the instructions for the installation of the H frame on the heated bed are wrong.
+This has to be mounted the opposite way so the belt below is straight.</p>
+
+<p>I was very impressed with the first prints. I only had to tighten the belts a bit to get a very nice 
+<a href="https://www.thingiverse.com/make:370493">XYZ calibration cube</a></p>
+
+<h3 id="printing-bed-surface">Printing bed surface</h3>
+
+<p>The printer has some yellow tape on the hotbed. This was coming off fast after removing the first few prints from the bed.
+I needed a better solution for this so I got a <a href="https://www.velleman.eu/products/view/?id=417314">215 x 215 x 3 mm glass plate</a>
+The glass plate causes a smooth side when printing which I think is really nice. When the bed is leveled properly it sticks
+very well. In case of smaller prints with less contact to the bed I also print a raft so the print won't get loose while printing.
+Please note I only print with PLA filament.</p>
+
+<h3 id="upgrades">Upgrades</h3>
+
+<p>The Anet A8 is a clone of the Prusa i3. There are lots of modifications on thingiverse to make it look even more like a Prusa i3.
+One of the nicest modifications I did was the spool holder that goes on top of the frame. This saves some space and causes
+the filament to go in a straight line to the extruder. The printer could now fit on a IKEA Lack side table instead of taking up
+all my desk space.</p>
+
+<h4 id="bed-leveling">Bed leveling</h4>
+
+<p>One of the things that was very time consuming with this printer was leveling the bed. Adding wing nut bed level screw knobs
+and spring bushings made it a lot easier to level the bed. I had to drill out the holes on the heat bed a bit 
+as these were threaded.</p>
+
+<h4 id="noise-reduction">Noise reduction</h4>
+
+<p>With the printer on the small side table it made quite some noise while printing. I printed 6 vibration dampers to reduce this noise.
+Also I changed the cooling fan speed to 50% in my slicer software, <a href="https://www.simplify3d.com/">Simplify3D</a>.</p>
+
+<h4 id="hotbed-connector">Hotbed connector</h4>
+
+<p>Another known problem with this printer is the hotbed connector. I noticed the hotbed was not heating up properly and saw the plastic
+connector got burned on both sides. I fixed this by soldering the red and black wire directly to the hotbed. To prevent issues with this
+in the future I added a cable strain relief.</p>
+
+<h4 id="mosfet">MOSFET</h4>
+
+<p>One of the last thing I installed was a <a href="https://www.banggood.com/3D-Printer-Parts-General-Add-on-Heated-Bed-Power-Expansion-Module-High-Power-For-Chitu-Motherboard-p-1086965.html?p=E8231110898371201705">MOSFET</a>. I've added it to move some of the current from the mainboard. Older versions of the mainboard
+had different connectors which could melt if not properly connected. The hotbed is now powered through the MOSFET which removes some
+stress for the main board.</p>
+
+<h4 id="all-other-upgrades">All other upgrades</h4>
+
+<p>Some other modifications I printed which I think are nice but not really needed;</p>
+
+<ul>
+<li>semi circular fan duct</li>
+<li>filament guide</li>
+<li>main board cover</li>
+<li>extruder button</li>
+<li>cooling fan cover</li>
+</ul>
+
+<p>The list of all the upgrades I've printed: <a href="https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades">https://www.thingiverse.com/snoek09/collections/anet-a8-upgrades</a></p>
+
+<p><img src="/images/anet-a8/anet-a8.jpg" alt="Anet A8 with 3D printed upgrades" title="" class="img-fluid" /></p>
+
+<p><img src="/images/anet-a8/spool-holder.jpg" alt="Spool holder" title="" class="img-fluid" /></p>
+
+<p><img src="/images/anet-a8/heated-bed.jpg" alt="Heated bed upgrades" title="" class="img-fluid" /></p>
+
+<p><img src="/images/anet-a8/cable-strain-relief.jpg" alt="Cable strain relief" title="" class="img-fluid" /></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Setting up Kotlin in Android Studio]]></title>
+            <link href="https://www.henrysnoek.com/blog/2017/03/05/convert-to-kotlin/"/>
+            <updated>2017-03-05T00:00:00+00:00</updated>
+            <id>https://www.henrysnoek.com/blog/2017/03/05/convert-to-kotlin/</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2017/02/22/revisiting-android-development/">Last time</a> I made a simple
+<a href="https://github.com/snoek09/SpotifyAndroidSdkExample">Android app using the Spotify SDK</a>.
+Now, it's time to convert this to <a href="http://kotlinlang.org">Kotlin</a> code.
+Kotlin is a statically-typed programming language that runs on the Java Virtual Machine.</p>
+
+<!-- more -->
+
+<h3 id="install-kotlin-plugin">Install Kotlin plugin</h3>
+
+<p>In Android Studio first download the Kotlin plugin.
+To use the plugin you can automatically configure or update your build configuration.
+In this example it will be configured manually:</p>
+
+<ul>
+<li>In <code>build.gradle</code> add the different version string and classpath for the plugin.
+These values will vary depending on the version you're using:</li>
+</ul>
+
+<pre><code>buildscript {
+    ext.support_version = '25.2.0'
+    ext.kotlin_version = '1.1.0'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+</code></pre>
+
+<ul>
+<li>Add the new dependency in <code>app/build.gradle</code>:</li>
+</ul>
+
+<pre><code>...
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+...
+</code></pre>
+
+<h3 id="convert-to-kotlin">Convert to Kotlin</h3>
+
+<p>After syncing the new build configuration you should now be able to convert Java
+to Kotlin code. In the <code>Code</code> menu select <code>Convert Java File to Kotlin File</code>.
+Or use this short-cut on Linux: <code>Ctrl+Alt+Shift+K</code>.</p>
+
+<p>All changes made for the example app are viewable in this
+<a href="https://github.com/snoek09/SpotifyAndroidSdkExample/pull/1/files">pull request</a>.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Revisiting Android Development]]></title>
+            <link href="https://www.henrysnoek.com/blog/2017/02/22/revisiting-android-development/"/>
+            <updated>2017-02-22T00:00:00+00:00</updated>
+            <id>https://www.henrysnoek.com/blog/2017/02/22/revisiting-android-development/</id>
+            <content type="html"><![CDATA[<p>In the summer of 2012 I worked on the Ziggo TV Android app. That's almost 5 years ago.
+Recently I've taken some first steps to get back into developing a new Android app.
+I'm glad to see some nice changes in Android development:</p>
+
+<!-- more -->
+
+<h3 id="android-studio">Android Studio</h3>
+
+<p>Back then I did all my development in Eclipse. Android Studio would be available a year later.
+In the meantime I've been getting used to Jetbrains' PhpStorm since I use this in my day job.
+The transation to Android Studio has been pretty seamless so far.</p>
+
+<h3 id="gradle">Gradle</h3>
+
+<p>Ant has been replaced by Gradle as a build system. This could make it easier to mix multiple languages in a project.</p>
+
+<h3 id="kotlin">Kotlin</h3>
+
+<p>Kotlin looks very promising as this could make writing app code more fun.
+I just didn't enjoy writing Java code that much. I do have to say back then I wrote a lot of Perl code before that. The verbosity of Java was a bit too much for me.</p>
+
+<h3 id="next-steps">Next steps</h3>
+
+<p>The coming weeks I'll have a look at what's currently possible with Android and Kotlin.
+A first example app using the Spotify Android SDK is available here:
+<a href="https://github.com/snoek09/SpotifyAndroidSdkExample">https://github.com/snoek09/SpotifyAndroidSdkExample</a></p>
+]]></content>
+        </entry>
+    </feed>
